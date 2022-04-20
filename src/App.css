@@ -70,19 +70,22 @@ html {
 .content {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   max-width: 1100px;
 }
 
 .nav {
-  width: 30%;
+  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 30px;
+  gap: 5px;
   align-self: flex-start;
   margin-top: 15px;
-  margin-right: 7%;
+  margin-right: 50px;
+  height: 100% !important;
 }
 
 .info {
@@ -102,13 +105,14 @@ html {
 
   .nav {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     gap: 10px;
     margin-bottom: 20px;
+    height: 100%;
+    width: 100%;
   }
 
   .header {
@@ -116,8 +120,24 @@ html {
   }
 
   .btn-user h3:hover {
+    color: var(--clr-primary-5);
     border-bottom: solid 3px var(--clr-primary-5);
-    border-left: solid 0 #fff;
+  }
+
+  .btn-user h3 {
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .btn-user h3:hover {
+    color: var(--clr-primary-5);
+    border-left: solid 3px var(--clr-primary-5);
+  }
+
+  .btn-user h3 {
+    padding: 0;
   }
 }
 
@@ -141,19 +161,19 @@ html {
   border: none;
   cursor: pointer;
   height: 20px;
+  max-width: inherit;
+  margin-bottom: 20px;
+  min-height: inherit;
 }
 
 .btn-user h3 {
-  text-transform: capitalize;
   font-weight: 500;
   font-size: 2.2rem;
   transition: all 0.3s linear;
   color: var(--clr-grey-1);
-  padding-left: 40px;
   letter-spacing: 0.1rem;
 }
 
 .btn-user h3:hover {
   color: var(--clr-primary-5);
-  border-left: solid 3px var(--clr-primary-5);
 }

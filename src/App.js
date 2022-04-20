@@ -4,7 +4,11 @@ import Person from "./Person";
 import React, { useState } from "react";
 
 const App = () => {
-  const [user, setUser] = useState(2);
+  const [user, setUser] = useState(0);
+
+  const getUser = (Id) => {
+    setUser(Id);
+  };
 
   return (
     <section className="page">
@@ -15,7 +19,7 @@ const App = () => {
         <div className="nav">
           {data.map((person) => {
             return (
-              <button class="btn-user">
+              <button class="btn-user" onClick={() => getUser(person.id - 1)}>
                 <h3>{person.name}</h3>
               </button>
             );

@@ -110,9 +110,12 @@ body {
   margin: 0 auto;
   margin-top: 30px;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .lines {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
